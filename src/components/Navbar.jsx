@@ -13,7 +13,7 @@ function Navbar() {
 
   return (
     <div className='h-20 w-full bg-black flex items-center justify-between px-4 sm:px-6 md:px-8 xl:px-10 2xl:px-40 relative'>
-        <img src={logo} alt="Logo" className='h-16' />
+        <img src={logo} alt="Logo" className='h-16' loading='lazy' />
         <HiMiniBars3 onClick={() => {setIsOpen(!isOpen)}} className='md:hidden text-2xl text-white cursor-pointer hover:text-gray-200 transition duration-500 linear'/>
         
         {isOpen && (
