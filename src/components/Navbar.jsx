@@ -2,7 +2,6 @@ import React from 'react'
 import { useState } from 'react';
 import logo from './images/logo.png'
 import { HiMiniBars3 } from "react-icons/hi2";
-import { GiCrossMark } from "react-icons/gi";
 import { ImCross } from "react-icons/im";
 import { NavLink } from "react-router-dom";
 function Navbar() {

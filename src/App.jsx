@@ -7,6 +7,10 @@ import About from './components/About';
 import Menu from './components/Menu';
 import Chefs from './components/Chefs';
 import Contact from './components/Contact';
+import Starterssection from './components/Starterssection';
+import Maincoursessection from './components/Maincoursessection';
+import Dessertssection from './components/Dessertssection';
+import Beveragessection from './components/Beveragessection';
 
 const router = createBrowserRouter([
   {
@@ -28,7 +32,32 @@ const router = createBrowserRouter([
     element : <div>
       <Navbar/>
       <Menu/>
-    </div>
+    </div>,
+    children:[
+      {
+        index: true,
+        element: <Starterssection />
+      },
+      {
+        path:'starters',
+        element: <Starterssection />
+      },
+      {
+        path:'maincourses',
+        element: <Maincoursessection />
+      },
+      {
+        path:'desserts',
+        element: <Dessertssection />
+      },
+      {
+        path:'beverages',
+        element: <Beveragessection />
+      }
+
+      
+    ]
+ 
   },
   {
     path: '/chefs',
