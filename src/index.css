@@ -1,6 +1,12 @@
 
 
+@import url('https://fonts.googleapis.com/css2?family=Andada+Pro:ital,wght@0,400..840;1,400..840&display=swap');
+
 @import "tailwindcss";
+
+body {
+    font-family: "Andada Pro", serif;
+}
 
 
 

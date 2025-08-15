@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Dish4() {
+function Card4() {
   return (
        <div className='h-85 w-[90vw] md:w-[45vw] lg:w-[30vw] 2xl:w-[25vw] bg-[#1f1d1df8] rounded-2xl overflow-hidden shrink-0 text-white border-[1px] border-[#565454]'>
         <div className='h-[60%] w-full bg-yellow-700'><img src={img} alt="cups" className='h-full w-full object-cover hover:scale-110 transition duration-500 linear' loading='lazy' /></div>
@@ -14,4 +14,4 @@ function Dish4() {
   )
 }
 
-export default Dish4
+export default Card4
