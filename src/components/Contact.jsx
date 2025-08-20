@@ -74,14 +74,14 @@ function Contact() {
                   <input type="text" placeholder='Full Name' className='border-1 border-[#565454] h-9 w-[78vw] lg:w-[40vw] 2xl:w-[30vw] pl-2.5 text-[18px] text-[#B8A474] rounded-[5px] font-semibold bg-black outline-0'  {...register('fullName', {
                     required:'This field is required',
                     minLength:{value:4, message:'Minimum length must be 4 characters'},
-                    maxLength:{value:50, message:'Maximum length must be 10 characters'},
+                    maxLength:{value:50, message:'Maximum length must be 50 characters'},
                     pattern:{value: /^[A-Z][a-z]+(?:\s[A-Z][a-z]+)*$/, message:'Each word must start with a capital letter'}
                   })} />
                   {errors.fullName && <p className='text-[14px] text-red-500'>{errors.fullName.message}</p>}
                   <input type="email" placeholder='Email Address' className='border-1 border-[#565454] h-9 w-[78vw] lg:w-[40vw]  2xl:w-[30vw] pl-2.5 text-[18px] text-[#B8A474] rounded-[5px] font-semibold bg-black outline-0'  {...register('Email', {
                      required:'This field is required',
                     minLength:{value:4, message:'Minimum length must be 4 characters'},
-                    maxLength:{value:50, message:'Maximum length must be 10 characters'},
+                    maxLength:{value:50, message:'Maximum length must be 50 characters'},
                   })} />
                    {errors.Email && <p className='text-[14px] text-red-500'>{errors.Email.message}</p>}
 
