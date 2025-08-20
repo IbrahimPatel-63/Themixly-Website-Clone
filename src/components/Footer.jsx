@@ -3,6 +3,7 @@ import logo from './images/logo.png'
 import { FaFacebookF } from "react-icons/fa";
 import { FaWhatsapp } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -19,18 +20,20 @@ function Footer() {
 
           <div className='px-5 md:pt-15'>
             <h1 className='text-xl font-semibold'>Quick Links</h1>
-            <p className='pt-2 text-[18px] text-[#D8D4D0] cursor-pointer'>Home</p>
-            <p className='pt-2 text-[18px] text-[#D8D4D0] cursor-pointer'>About</p>
-            <p className='pt-2 text-[18px] text-[#D8D4D0] cursor-pointer'>Menu</p>
-            <p className='pt-2 text-[18px] text-[#D8D4D0] cursor-pointer'>Chefs</p>
+            <div className='flex flex-col'>
+            <Link to='/' className='pt-2 text-[18px] text-[#D8D4D0] cursor-pointer hover:text-[#d8d4d098] transition duration-200 linear'>Home</Link>
+            <Link to='/about' className='pt-2 text-[18px] text-[#D8D4D0] cursor-pointer hover:text-[#d8d4d098] transition duration-200 linear'>About</Link>
+            <Link to='/menu' className='pt-2 text-[18px] text-[#D8D4D0] cursor-pointer hover:text-[#d8d4d098] transition duration-200 linear'>Menu</Link>
+            <Link to='/chefs' className='pt-2 text-[18px] text-[#D8D4D0] cursor-pointer hover:text-[#d8d4d098] transition duration-200 linear'>Chefs</Link>
+            </div>
           </div>
 
             <div className='px-5 lg:pt-15'>
             <h1 className='text-xl font-semibold'>Contact</h1>
-            <p className='pt-2 text-[17px] text-[#D8D4D0]  cursor-pointer'>123 Culinary Avenue</p>
-            <p className='pt-2 text-[17px] text-[#D8D4D0]  cursor-pointer'>New York, NY 10001</p>
-            <p className='pt-2 text-[17px] text-[#D8D4D0]  cursor-pointer'>(555) 123-4567</p>
-            <p className='pt-2 text-[17px] text-[#D8D4D0]  cursor-pointer'>reservations@resto-one.com</p>
+            <p className='pt-2 text-[17px] text-[#D8D4D0] '>123 Culinary Avenue</p>
+            <p className='pt-2 text-[17px] text-[#D8D4D0] '>New York, NY 10001</p>
+            <p className='pt-2 text-[17px] text-[#D8D4D0] '>(555) 123-4567</p>
+            <p className='pt-2 text-[17px] text-[#D8D4D0] '>reservations@resto-one.com</p>
           </div>
 
           <div className='w-full px-5 md:w-100 xl:w-70 xl:px-0 xl:pt-15'>

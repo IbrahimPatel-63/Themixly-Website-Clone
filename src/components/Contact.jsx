@@ -28,14 +28,14 @@ function Contact() {
       <p className='text-center text-xl text-[#D8D4D0] sm:w-120 lg:w-full'>Join us for an unforgettable dining experience. Make your reservation today.</p>
       </div>
 
-      <div className='h-320 w-full lg:h-200 bg-teal-400 flex flex-col lg:flex-row '>
+      <div className='h-320 w-full lg:h-200 bg-black flex flex-col lg:flex-row '>
         <div className='h-[40%] w-full lg:h-full lg:w-[50%] bg-black flex flex-col gap-5 pl-5 lg:pl-8 2xl:pl-35 sm:gap-8'>
           <h1 className='text-2xl font-semibold pt-15 lg:pt-30 '>Get in Touch</h1>
           <div className='flex '>
             <div className='h-10 w-15 bg-[#1E1C1C] rounded-[50%] flex items-center justify-center'><IoLocationOutline className='text-2xl text-[#FFA500]' /></div>
             <div className='ml-2'>
             <h1 className='text-[18px] font-semibold'>Location</h1>
-            <p className='w-55 text-[#D8D4D0] xl:text-[18px]'>123 Culinary Avenue Downtown DistrictNew York, NY 10001</p>
+            <p className='w-55 text-[#D8D4D0] xl:text-[18px]'>123 Culinary Avenue Downtown District New York, NY 10001</p>
             </div>
           </div>
 
