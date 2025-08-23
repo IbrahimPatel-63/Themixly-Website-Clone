@@ -79,32 +79,31 @@ function Contact() {
 
                 
                   <input type="text" placeholder='Full Name' className='border-1 border-[#565454] h-9 w-[78vw] lg:w-[40vw] 2xl:w-[30vw] pl-2.5 text-[18px] text-[#B8A474] rounded-[5px] font-semibold bg-black outline-0'  {...register('fullName', {
-                    required:'This field is required',
-                    minLength:{value:4, message:'Minimum length must be 4 characters'},
-                    maxLength:{value:50, message:'Maximum length must be 50 characters'},
+                    required:'This field cannot be left blank',
+                    minLength:{value:4, message:'Please enter at least 4 characters'},
+                    maxLength:{value:50, message:'Maximum allowed length is 50 characters'},
                     pattern:{value: /^[A-Z][a-z]+(?:\s[A-Z][a-z]+)*$/, message:'Each word must start with a capital letter'}
                   })} />
                   {errors.fullName && <p className='text-[14px] text-red-500'>{errors.fullName.message}</p>}
                   <input type="email" placeholder='Email Address' className='border-1 border-[#565454] h-9 w-[78vw] lg:w-[40vw]  2xl:w-[30vw] pl-2.5 text-[18px] text-[#B8A474] rounded-[5px] font-semibold bg-black outline-0'  {...register('Email', {
-                     required:'This field is required',
-                    minLength:{value:4, message:'Minimum length must be 4 characters'},
-                    maxLength:{value:50, message:'Maximum length must be 50 characters'},
+                     required:'This field cannot be left blank',
+                    maxLength:{value:50, message:'Maximum allowed length is 50 characters'},
                   })} />
                    {errors.Email && <p className='text-[14px] text-red-500'>{errors.Email.message}</p>}
 
                    <input type="text" placeholder='Phone Number' className='border-1 border-[#565454] h-9 w-[78vw] lg:w-[40vw]  2xl:w-[30vw] pl-2.5 text-[18px] text-[#B8A474] rounded-[5px] font-semibold bg-black outline-0' {...register('phoneNumber', {
-                     required:'This field is required',
-                    minLength:{value:10, message:'Must be 10 digits'},
-                    maxLength:{value:10, message:'Must be 10 digits'},
-                    pattern:{value:/^[0-9]+$/, message:'must be digit '}
+                     required:'This field cannot be left blank',
+                    minLength:{value:10, message:'Please enter a valid 10-digit number'},
+                    maxLength:{value:10, message:'Please enter a valid 10-digit number'},
+                    pattern:{value:/^[0-9]+$/, message:'Only numbers are allowed'}
                   })} />
                       {errors.phoneNumber && <p className='text-[14px] text-red-500'>{errors.phoneNumber.message}</p>}
 
                    <input type="text" placeholder='Number of Guests' className='border-1 border-[#565454] h-9 w-[78vw] lg:w-[40vw]  2xl:w-[30vw] pl-2.5 text-[18px] text-[#B8A474] rounded-[5px] font-semibold bg-black outline-0' {...register('guests', {
-                    required:'This field is required',
+                    required:'This field cannot be left blank',
                     validate:{
-                      onlyDigits: (value) => /^[0-9]+$/.test(value) || 'must be digit',
-                      limit: (value) => /^(?:[1-9]|1[0-9]|20)$/.test(value) || 'min 1 and max 20 members allowed'
+                      onlyDigits: (value) => /^[0-9]+$/.test(value) || 'Only numbers are allowed',
+                      limit: (value) => /^(?:[1-9]|1[0-9]|20)$/.test(value) || 'Only 1 to 20 members are allowed'
                     }
                    })}/>
                        {errors.guests && <p className='text-[14px] text-red-500'>{errors.guests.message}</p>}

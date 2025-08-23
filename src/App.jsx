@@ -12,6 +12,7 @@ import Maincoursessection from './components/Maincoursessection';
 import Dessertssection from './components/Dessertssection';
 import Beveragessection from './components/Beveragessection';
 import Reserved from './components/Reserved';
+import { Navigate } from 'react-router-dom';
 
 const router = createBrowserRouter([
   {
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
     children:[
       {
         index: true,
-        element: <Starterssection />
+        element: <Navigate to='starters' replace />
       },
       {
         path:'starters',

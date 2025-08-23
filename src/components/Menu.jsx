@@ -9,10 +9,10 @@ function Menu() {
       <div className='bg-[#e78c37] h-1 w-24  mt-2 mb-5 lg:mt-4 lg:mb-6'></div>
       <p className='text-xl sm:text-[18px] font-semibold md:w-145 md:leading-8 text-[#f1d3b3f5]'>Explore our delightful vegetarian creations made with fresh, seasonal ingredients and global flavors.</p>
       <div className='pt-15 flex flex-wrap gap-4 items-center justify-around  sm:justify-center '>
-        <Link to='starters' className='bg-[#4d4d4d] px-10 py-2.5 font-semibold rounded-full hover:bg-[#f1d3b3f5] hover:text-[#000000] transition duration-200 ease-linear'>Starters</Link>
-        <Link to='maincourses' className='bg-[#4d4d4d] px-10 py-2.5 font-semibold rounded-full hover:bg-[#f1d3b3f5] hover:text-[#000000] transition duration-200 ease-linear'>Main Courses</Link>
-        <Link to='desserts' className='bg-[#4d4d4d] px-10 py-2.5 font-semibold rounded-full hover:bg-[#f1d3b3f5] hover:text-[#000000] transition duration-200 ease-linear'>Desserts</Link>
-        <Link to='beverages' className='bg-[#4d4d4d] px-10 py-2.5 font-semibold rounded-full hover:bg-[#f1d3b3f5] hover:text-[#000000] transition duration-200 ease-linear'>Beverages</Link>
+        <NavLink to='starters' className={({isActive}) => `${isActive ?  'bg-[#f1d3b3f5] px-10 py-2.5 font-semibold rounded-full text-black' : 'bg-[#4d4d4d] px-10 py-2.5 font-semibold rounded-full'}`}>Starters</NavLink>
+        <NavLink to='maincourses' className={({isActive}) => `${isActive ?  'bg-[#f1d3b3f5] px-10 py-2.5 font-semibold rounded-full text-black' : 'bg-[#4d4d4d] px-10 py-2.5 font-semibold rounded-full'}`}>Main Courses</NavLink>
+        <NavLink to='desserts' className={({isActive}) => `${isActive ?  'bg-[#f1d3b3f5] px-10 py-2.5 font-semibold rounded-full text-black' : 'bg-[#4d4d4d] px-10 py-2.5 font-semibold rounded-full'}`}>Desserts</NavLink>
+        <NavLink to='beverages' className={({isActive}) => `${isActive ?  'bg-[#f1d3b3f5] px-10 py-2.5 font-semibold rounded-full text-black' : 'bg-[#4d4d4d] px-10 py-2.5 font-semibold rounded-full'}`}>Beverages</NavLink>
       </div>
       
     <Outlet />
