@@ -11,6 +11,7 @@ import Starterssection from './components/Starterssection';
 import Maincoursessection from './components/Maincoursessection';
 import Dessertssection from './components/Dessertssection';
 import Beveragessection from './components/Beveragessection';
+import Reserved from './components/Reserved';
 
 const router = createBrowserRouter([
   {
@@ -73,6 +74,10 @@ const router = createBrowserRouter([
       <Contact/>
     </div>
   },
+  {
+    path: '/reserved',
+    element : < Reserved />
+  }
 
 ]
 );

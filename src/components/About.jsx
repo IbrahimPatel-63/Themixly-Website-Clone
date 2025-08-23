@@ -3,7 +3,7 @@ import dish1 from './images/dish1.webp'
 
 function About() {
   return (
-  <div className='h-360 sm:h-300 md:h-285 lg:h-210 xl:h-185 2xl:h-[calc(100vh-80px)] w-full bg-black flex flex-col lg:flex-row text-white'>
+    <div className='h-360 sm:h-300 md:h-285 lg:h-210 xl:h-185 2xl:h-[calc(100vh-80px)] w-full bg-black flex flex-col lg:flex-row text-white'>
     <div className='h-[60%] sm:h-[55%] lg:h-full lg:w-[50%] w-full bg-black px-4 pt-8 2xl:pt-8 sm:px-6 lg:px-8 2xl:pl-38 md:pt-20'>
       <h1 className='text-[28px] font-bold md:text-4xl lg:text-5xl'>Our <span className='text-[#DAA520]'>Story</span></h1>
       <div className='h-1 w-19   bg-[#DAA520] mt-2.5 mb-6 md:mt-4'></div>

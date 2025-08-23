@@ -18,11 +18,11 @@ function Navbar() {
         {isOpen && (
             <div className='h-75 w-[90%]  bg-black absolute top-22 left-5 rounded-xl text-white flex flex-col gap-6 pl-5 py-12 text-[17px] font-semibold z-1 '>
                 <ImCross onClick={() => {setIsOpen(false)}} className='text-white absolute top-4 right-5 text-xl hover:text-orange-500 cursor-pointer transition duration-500 ease-in-out' />
-                <NavLink to='/'  className={({isActive}) => `${isActive ?  'text-orange-500 hover:border-y-[1px] hover:border-white' : ''}`}>Home</NavLink>
-                <NavLink to='/about' className={({isActive}) => `${isActive ?  'text-orange-500  hover:border-y-[1px] hover:border-white' : ''}`}>About</NavLink>
-                <NavLink to='/menu' className={({isActive}) => `${isActive ?  'text-orange-500  hover:border-y-[1px] hover:border-white' : ''}`}>Menu</NavLink>
-                <NavLink to='/chefs' className={({isActive}) => `${isActive ?  'text-orange-500  hover:border-y-[1px] hover:border-white' : ''}`}>Chefs</NavLink>
-                <NavLink to='/contact' className={({isActive}) => `${isActive ?  'text-orange-500  hover:border-y-[1px] hover:border-white' : ''}`}>Contact</NavLink>
+                <NavLink to='/'  className={({isActive}) => `${isActive ?  'text-orange-500' : ''}`} onClick={() => {setIsOpen(false)}}>Home</NavLink>
+                <NavLink to='/about' className={({isActive}) => `${isActive ?  'text-orange-500' : ''}`} onClick={() => {setIsOpen(false)}}>About</NavLink>
+                <NavLink to='/menu' className={({isActive}) => `${isActive ?  'text-orange-500' : ''}`} onClick={() => {setIsOpen(false)}}>Menu</NavLink>
+                <NavLink to='/chefs' className={({isActive}) => `${isActive ?  'text-orange-500' : ''}`} onClick={() => {setIsOpen(false)}}>Chefs</NavLink>
+                <NavLink to='/contact' className={({isActive}) => `${isActive ?  'text-orange-500' : ''}`} onClick={() => {setIsOpen(false)}}>Contact</NavLink>
             </div>
         )}
 

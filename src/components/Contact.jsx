@@ -5,6 +5,8 @@ import { MdOutlinePhone } from "react-icons/md";
 import { TfiEmail } from "react-icons/tfi";
 import { IoMdTime } from "react-icons/io";
 import Footer from './Footer';
+import { useNavigate } from 'react-router-dom';
+
 
 
 function Contact() {
@@ -14,9 +16,14 @@ function Contact() {
     watch,
     formState: { errors },
   } = useForm()
+  const navigate = useNavigate()
 
   function whenSubmit(data) {
+    
     console.log('Form data submitted',data);
+     navigate('/reserved')
+   
+
 
   }
 
