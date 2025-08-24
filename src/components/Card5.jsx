@@ -4,7 +4,7 @@ import React from 'react'
 function Card5({img,title,name,desc,btn1,btn2}) {
   return (
     <div className='group h-130 w-[90vw] md:w-[45vw] lg:w-[30vw] 2xl:w-[25vw] bg-[#1e1c1cbc] rounded-2xl overflow-hidden mt-12 border-[.5px] border-[#ffffff32] shrink-0' >
-        <div className='h-[62%] w-full bg-teal-400  overflow-hidden relative'>
+        <div className='h-[62%] w-full overflow-hidden relative'>
             <div className='h-full w-full bg-[#0000005c] absolute opacity-0 group-hover:opacity-[1] transition duration-700 linear'>
               <div className='flex gap-2 pl-6 absolute bottom-8 '>
                 <button className='text-white text-[13px] bg-[#e78c37aa] tracking-wider px-2 py-1 rounded-full'>{btn1}</button>
