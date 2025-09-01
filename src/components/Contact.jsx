@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useForm } from "react-hook-form"
 import { IoLocationOutline } from "react-icons/io5";
 import { MdOutlinePhone } from "react-icons/md";
@@ -10,6 +10,9 @@ import { useNavigate } from 'react-router-dom';
 
 
 function Contact() {
+
+  const [isLoading, setIsLoading] = useState(false)
+
     const {
     register,
     handleSubmit,
@@ -18,14 +21,22 @@ function Contact() {
   } = useForm()
   const navigate = useNavigate()
 
-  function whenSubmit(data) {
-    
-    console.log('Form data submitted',data);
-     navigate('/reserved')
-   
+   function whenSubmit(data) {
+   console.log('Form data submitted',data);
+   setIsLoading(true)
 
+  
+    
+  setTimeout(() => {
+    setIsLoading(false)
+     navigate('/reserved')
+  }, 4000);
 
   }
+
+   function changeText() {
+    setSubmit('Reserving....')
+   }
 
   return (
     <div className='min-h-[100vh] w-full bg-black text-white'>
@@ -119,7 +130,7 @@ function Contact() {
                    <textarea type='text' placeholder='Special requests or dietary restrictions' className='border-1 border-[#565454] h-32 w-[78vw] lg:w-[40vw]  2xl:w-[30vw] pl-2.5 pt-4 text-[14px] text-white rounded-[5px] font-semibold bg-black outline-0' />
 
 
-                  <button type='submit' className='h-11 w-[78vw] lg:w-[40vw]  2xl:w-[30vw] bg-[#E78C37] text-black text-xl font-semibold rounded-[5px] cursor-pointer hover:bg-[#e78c37af] transition duration-300 linear'>Reserve Table</button>
+                  <button type='submit' disabled={isLoading} className={`h-11 w-[78vw] lg:w-[40vw]  2xl:w-[30vw] bg-[#E78C37] text-black text-xl font-semibold rounded-[5px]  ${isLoading ? 'bg-[#e78c37af] cursor-not-allowed ' : 'bg-[#E78C37] cursor-pointer'}`} >{isLoading ? 'Reserving....' : 'Reserve Table'}</button>
 
               </div>
             </form>
