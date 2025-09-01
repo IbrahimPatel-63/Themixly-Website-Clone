@@ -16,13 +16,13 @@ function Navbar() {
         <HiMiniBars3 onClick={() => {setIsOpen(!isOpen)}} className='md:hidden text-2xl text-white cursor-pointer hover:text-gray-200 transition duration-500 linear'/>
         
         {isOpen && (
-            <div className='h-75 w-[90%]  bg-black absolute top-22 left-5 rounded-xl text-white flex flex-col gap-6 pl-5 py-12 text-[17px] font-semibold z-1 '>
+            <div className='h-82 w-[90%]  bg-black absolute top-22 left-5 rounded-xl text-white flex flex-col gap-6 px-5 py-12 text-[17px] font-semibold z-1 '>
                 <ImCross onClick={() => {setIsOpen(false)}} className='text-white absolute top-4 right-5 text-xl hover:text-orange-500 cursor-pointer transition duration-500 ease-in-out' />
-                <NavLink to='/'  className={({isActive}) => `${isActive ?  'text-orange-500' : ''}`} onClick={() => {setIsOpen(false)}}>Home</NavLink>
-                <NavLink to='/about' className={({isActive}) => `${isActive ?  'text-orange-500' : ''}`} onClick={() => {setIsOpen(false)}}>About</NavLink>
-                <NavLink to='/menu' className={({isActive}) => `${isActive ?  'text-orange-500' : ''}`} onClick={() => {setIsOpen(false)}}>Menu</NavLink>
-                <NavLink to='/chefs' className={({isActive}) => `${isActive ?  'text-orange-500' : ''}`} onClick={() => {setIsOpen(false)}}>Chefs</NavLink>
-                <NavLink to='/contact' className={({isActive}) => `${isActive ?  'text-orange-500' : ''}`} onClick={() => {setIsOpen(false)}}>Contact</NavLink>
+                <NavLink to='/'  className={({isActive}) => `${isActive ?  'text-orange-500 hover:bg-[#4D4D4D] py-1 transition duration-500 ease-in-out rounded-[5px]' : 'hover:bg-[#4D4D4D] py-1 transition duration-700 ease-in-out rounded-[5px]'}`} onClick={() => {setIsOpen(false)}}>Home</NavLink>
+                <NavLink to='/about' className={({isActive}) => `${isActive ?  'text-orange-500 hover:bg-[#4D4D4D] py-1 transition duration-500 ease-in-out rounded-[5px]' : 'hover:bg-[#4D4D4D] py-1 transition duration-700 ease-in-out rounded-[5px]'}`} onClick={() => {setIsOpen(false)}}>About</NavLink>
+                <NavLink to='/menu' className={({isActive}) => `${isActive ?  'text-orange-500 hover:bg-[#4D4D4D] py-1 transition duration-500 ease-in-out rounded-[5px]' : 'hover:bg-[#4D4D4D] py-1 transition duration-700 ease-in-out rounded-[5px]'}`} onClick={() => {setIsOpen(false)}}>Menu</NavLink>
+                <NavLink to='/chefs' className={({isActive}) => `${isActive ?  'text-orange-500 hover:bg-[#4D4D4D] py-1 transition duration-500 ease-in-out rounded-[5px]' : 'hover:bg-[#4D4D4D] py-1 transition duration-700 ease-in-out rounded-[5px]'}`} onClick={() => {setIsOpen(false)}}>Chefs</NavLink>
+                <NavLink to='/contact' className={({isActive}) => `${isActive ?  'text-orange-500 hover:bg-[#4D4D4D] py-1 transition duration-500 ease-in-out rounded-[5px]' : 'hover:bg-[#4D4D4D] py-1 transition duration-700 ease-in-out rounded-[5px]'}`} onClick={() => {setIsOpen(false)}}>Contact</NavLink>
             </div>
         )}
 
